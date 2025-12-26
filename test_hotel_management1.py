@@ -1,4 +1,4 @@
-from hotel_management1 import calculate_bill
+from hotel_management1 import bill
 
 def test_standard_room():
     assert calculate_bill("Standard", 2) == 2000
