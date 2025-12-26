@@ -3,7 +3,7 @@ import sys
 
 
 
-guest_name = string(sys.argv[1])
+guest_name =sys.argv[1]
 room_type = string(sys.argv[2])
 nights =int(sys.argv[3])
 
