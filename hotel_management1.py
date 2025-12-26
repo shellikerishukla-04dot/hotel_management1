@@ -6,9 +6,9 @@ if len(sys.argv) != 4:
 
 
 
-guest_name = sys.argv[1]
-room_type = sys.argv[2]
-nights = int(sys.argv[3])
+guest_name = float(sys.argv[1])
+room_type = float(sys.argv[2])
+nights = float(sys.argv[3])
 
 # Decide price using if-else
 if room_type == "Standard":
