@@ -1,18 +1,24 @@
+# hotel_management1.py
 import sys
 
-# Safe argument handling
-name = sys.argv[1] if len(sys.argv) > 1 else "Ram"
-room = sys.argv[2] if len(sys.argv) > 2 else "Standard"
-nights = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].isdigit() else 1
+def calculate_bill(room, nights):
+    nights = int(nights)
+    if room == "Standard":
+        return 1000 * nights
+    elif room == "Deluxe":
+        return 2000 * nights
+    else:
+        return 3000 * nights
 
-# Calculate bill
-if room == "Standard":
-    bill = 1000 * nights
-elif room == "Deluxe":
-    bill = 2000 * nights
-else:
-    bill = 3000 * nights
 
-print("name =", name)
-print("room =", room)
-print("bill =", bill)
+# Only run this part when script is called directly
+if __name__ == "__main__":
+    name = sys.argv[1] if len(sys.argv) > 1 else "Unknown"
+    room = sys.argv[2] if len(sys.argv) > 2 else "Standard"
+    nights = sys.argv[3] if len(sys.argv) > 3 else "1"
+
+    bill = calculate_bill(room, nights)
+
+    print("name =", name)
+    print("room =", room)
+    print("bill =", bill)
