@@ -1,7 +1,7 @@
 import sys
 
 # Safe argument handling
-name = sys.argv[1] if len(sys.argv) > 1 else "Unknown"
+name = sys.argv[1] if len(sys.argv) > 1 else "Ram"
 room = sys.argv[2] if len(sys.argv) > 2 else "Standard"
 nights = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].isdigit() else 1
 
