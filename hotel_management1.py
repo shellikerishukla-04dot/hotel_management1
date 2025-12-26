@@ -1,16 +1,11 @@
 import sys
 
-# Check if enough arguments provided
-if len(sys.argv) < 4:
-    print("Error: please provide name, room and nights")
+# Safe argument handling
+name = sys.argv[1] if len(sys.argv) > 1 else "Unknown"
+room = sys.argv[2] if len(sys.argv) > 2 else "Standard"
+nights = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].isdigit() else 1
 
-    sys.exit()
-
-name = sys.argv[1]
-room = sys.argv[2]
-nights = int(sys.argv[3])
-
-# simple bill calculation
+# Calculate bill
 if room == "Standard":
     bill = 1000 * nights
 elif room == "Deluxe":
