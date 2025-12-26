@@ -13,7 +13,7 @@ def calculate_bill(room, nights):
 
 # Only run this part when script is called directly
 if __name__ == "__main__":
-    name = sys.argv[1] if len(sys.argv) > 1 else "Unknown"
+    name = sys.argv[1] if len(sys.argv) > 1 else "Ram"
     room = sys.argv[2] if len(sys.argv) > 2 else "Standard"
     nights = sys.argv[3] if len(sys.argv) > 3 else "1"
 
