@@ -1,27 +1,23 @@
 import sys
 
+# Check if enough arguments provided
+if len(sys.argv) < 4:
+    print("Error: please provide name, room and nights")
 
-
-
-guest_name =sys.argv[1]
-room_type =sys.argv[2]
-nights =int(sys.argv[3])
-
-# Decide price using if-else
-if room_type == "Standard":
-    price = 1000
-elif room_type == "Deluxe":
-    price = 2000
-elif room_type == "Suite":
-    price = 3000
-else:
-    print("Invalid room type")
     sys.exit()
 
-total = price * nights
+name = sys.argv[1]
+room = sys.argv[2]
+nights = int(sys.argv[3])
 
-print("=== Hotel Billing System ===")
-print("Guest Name:", guest_name)
-print("Room Type:", room_type)
-print("Nights:", nights)
-print("Total Bill: ₹", total)
+# simple bill calculation
+if room == "Standard":
+    bill = 1000 * nights
+elif room == "Deluxe":
+    bill = 2000 * nights
+else:
+    bill = 3000 * nights
+
+print("name =", name)
+print("room =", room)
+print("bill =", bill)
