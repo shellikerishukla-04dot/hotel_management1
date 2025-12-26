@@ -1,10 +1,10 @@
-from hotel_management1 import bill
+from hotel_management1 import calculate_bill
 
 def test_standard_room():
-    assert bill("Standard", 2) == 2000
+    assert calculate_bill("Standard", 2) == 2000
 
 def test_deluxe_room():
-    assert bill("Deluxe", 3) == 6000
+    assert calculate_bill("Deluxe", 3) == 6000
 
 def test_suite_room():
-    assert bill("Suite", 1) == 3000
+    assert calculate_bill("Suite", 1) == 3000
