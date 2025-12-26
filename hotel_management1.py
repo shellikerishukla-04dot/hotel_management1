@@ -4,7 +4,7 @@ import sys
 
 
 guest_name =sys.argv[1]
-room_type = string(sys.argv[2])
+room_type =sys.argv[2]
 nights =int(sys.argv[3])
 
 # Decide price using if-else
